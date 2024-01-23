@@ -14,3 +14,15 @@ How to use:
     TAG: ${{ github.sha | head -c7 }}
     MANIFEST_FILE: cms-api/deployment.yaml
 ```
+
+## Trigger argocd sync action
+How to use:
+
+```
+- uses: ./argocd-sync
+  with:
+    ARGOCD_SERVER: ${{ secrets.ARGOCD_SERVER }}
+    ARGOCD_USER: ${{ secrets.ARGOCD_USER }}
+    ARGOCD_PASSWORD: ${{ secrets.ARGOCD_PASSWORD }}
+    ARGOCD_APPLICATION: $NAMESPACE.cms-api
+```

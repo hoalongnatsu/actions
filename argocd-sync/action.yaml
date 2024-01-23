@@ -1,0 +1,16 @@
+name: "Argocd Sync"
+description: "Trigger argocd sync application"
+
+inputs:
+  ARGOCD_SERVER:
+    required: true
+  ARGOCD_USER:
+    required: true
+  ARGOCD_PASSWORD:
+    required: true
+  ARGOCD_APPLICATION:
+    required: true
+
+runs:
+  using: "docker"
+  image: "Dockerfile"
