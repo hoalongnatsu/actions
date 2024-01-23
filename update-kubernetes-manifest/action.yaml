@@ -1,0 +1,22 @@
+name: "Update Kubernetes Manifest"
+description: "Clone GitHub and update image of deployment manifest"
+
+inputs:
+  GIT_USER:
+    required: true
+  GIT_PASSWORD:
+    required: true
+  GIT_REPO:
+    required: true
+  CONTAINER_REGISTRY:
+    required: true
+  IMAGE:
+    required: true
+  TAG:
+    required: true
+  MANIFEST_FILE:
+    required: true
+
+runs:
+  using: "docker"
+  image: "Dockerfile"
